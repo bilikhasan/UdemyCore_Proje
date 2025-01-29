@@ -25,5 +25,9 @@ namespace UdemyCore_Proje.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult NavigationPartial()
+        {
+            return PartialView();
+        }
     }
 }
