@@ -18111,6 +18111,8 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
@@ -19566,7 +19568,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Writer\Data\" />
-    <Folder Include="Areas\Writer\Models\" />
     <Folder Include="wwwroot\skydash\.git\objects\info\" />
     <Folder Include="wwwroot\skydash\.git\objects\pack\" />
     <Folder Include="wwwroot\skydash\.git\refs\tags\" />
