@@ -22,21 +22,23 @@ namespace UdemyCore_Proje.Areas.Writer.Controllers
             return View();
         }
         [HttpPost]
-        public async Task< IActionResult> Index(UserRegisterViewModel p)
+        public async Task<IActionResult> Index(UserRegisterViewModel p)
         {
-            if(ModelState.IsValid)
+
+            WriterUser w = new WriterUser()
             {
-                WriterUser w = new WriterUser()
-                {
-                    Name = p.Name,                  // soldaki identity (mesela Email) + writeruser (Name,Surname) class ları 
-                    Surname = p.Surname,            // sağdaki ise UserRegisterViewModel
-                    Email = p.Mail,
-                    UserName = p.UserName,
-                    ImageUrl = p.ImageUrl
-                };
+                Name = p.Name,                  // soldaki identity (mesela Email) + writeruser (Name,Surname) class ları 
+                Surname = p.Surname,            // sağdaki ise UserRegisterViewModel
+                Email = p.Mail,
+                UserName = p.UserName,
+                ImageUrl = p.ImageUrl
+            };
+
+            if (p.Password == p.ConfirmPassword)
+            {
                 var result = await _userManager.CreateAsync(w, p.Password);
 
-                if(result.Succeeded)
+                if (result.Succeeded && p.ConfirmPassword == p.Password)
                 {
                     return RedirectToAction("Index", "Login");
                 }
