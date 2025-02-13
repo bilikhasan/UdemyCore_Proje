@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace UdemyCore_Proje.Areas.Writer.Controllers
 {
@@ -22,6 +23,14 @@ namespace UdemyCore_Proje.Areas.Writer.Controllers
             ViewBag.v = values.Name + " " + values.Surname;
 
 
+
+            //Weather Api                                               OPENWEATHERMAP.ORG DAN ALINIDI VERİLER.
+            string api = "af3369bada0c2e3673970075122053f8";
+            string connection = "https://api.openweathermap.org/data/2.5/weather?q=istanbul&mode=xml&lang=tr&units=metric&appid=" + api;
+            XDocument document = XDocument.Load(connection);
+            ViewBag.v5 = document.Descendants("temperature").ElementAt(0).Attribute("value").Value;
+            ViewBag.v6 =document.Descendants("clouds").ElementAt(0).Attribute("name").Value;
+
             //Statistics
             Context c = new Context();
 
@@ -34,3 +43,6 @@ namespace UdemyCore_Proje.Areas.Writer.Controllers
         }
     }
 }
+
+
+//https://api.openweathermap.org/data/2.5/weather?q=batman&mode=xml&lang=tr&units=metric&appid=af3369bada0c2e3673970075122053f8
