@@ -7,6 +7,8 @@ using UdemyCore_Proje.Areas.Writer.Models;
 namespace UdemyCore_Proje.Areas.Writer.Controllers
 {
     [Area("Writer")]
+    [Route("Writer/[controller]/[action]")]
+
     public class LoginController : Controller
     {
 
@@ -32,7 +34,7 @@ namespace UdemyCore_Proje.Areas.Writer.Controllers
                 
                 if(result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Default");
+                    return RedirectToAction("Index", "Profile", new {area ="Writer"});
                 }
                 else
                 {

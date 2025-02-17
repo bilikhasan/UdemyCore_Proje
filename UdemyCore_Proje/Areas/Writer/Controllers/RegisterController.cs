@@ -7,6 +7,8 @@ using UdemyCore_Proje.Areas.Writer.Models;
 namespace UdemyCore_Proje.Areas.Writer.Controllers
 {
     [Area("Writer")]
+    [Route("Writer/[controller]/[action]")]
+
     public class RegisterController : Controller
     {
 
@@ -38,7 +40,7 @@ namespace UdemyCore_Proje.Areas.Writer.Controllers
             {
                 var result = await _userManager.CreateAsync(w, p.Password);
 
-                if (result.Succeeded && p.ConfirmPassword == p.Password)
+                if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Login");
                 }
@@ -50,7 +52,7 @@ namespace UdemyCore_Proje.Areas.Writer.Controllers
                     }
                 }
             }
-            return View();
+            return View(p);
         }
     }
 }
