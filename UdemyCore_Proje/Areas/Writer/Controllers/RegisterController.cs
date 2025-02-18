@@ -11,9 +11,7 @@ namespace UdemyCore_Proje.Areas.Writer.Controllers
 
     public class RegisterController : Controller
     {
-
         private readonly UserManager<WriterUser> _userManager;
-
         public RegisterController(UserManager<WriterUser> userManager)
         {
             _userManager = userManager;
