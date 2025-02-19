@@ -8,16 +8,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Core 5 Admin Paneli</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/corona-template/template/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/corona-template/template/assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
+
     <link rel="stylesheet" href="~/corona-template/template/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="~/corona-template/template/assets/images/favicon.png" />
@@ -236,15 +231,6 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <div class="page-header">
-                        <h3 class="page-title"></h3>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">@ViewBag.v2</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">@ViewBag.v3</li>
-                            </ol>
-                        </nav>
-                    </div>
 
 
                     @RenderBody()
@@ -282,5 +268,17 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <!-- End custom js for this page -->
+
+    <script src="~/corona-template/template/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/corona-template/template/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/corona-template/template/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="~/corona-template/template/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="~/corona-template/template/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/corona-template/template/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/corona-template/template/assets/js/dashboard.js"></script>
 </body>
 </html>
