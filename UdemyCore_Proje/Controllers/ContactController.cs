@@ -25,5 +25,6 @@ namespace UdemyCore_Proje.Controllers
             var values = messageManager.TGetByID(id);
             return View(values);
         }
+
     }
 }

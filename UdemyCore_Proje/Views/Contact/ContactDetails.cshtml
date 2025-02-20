@@ -9,7 +9,7 @@
     <div class="col-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <p class="card-description"> Deneyim Düzenleme Paneli </p>
+                <p class="card-description"> Mesaj Detay Sayfası</p>
                 <form class="forms-sample">
 
                     <div class="form-group">
@@ -17,21 +17,22 @@
                         @Html.TextBoxFor(x => x.MessageID, new { @class = "form-control" })
                     </div>
                     <div class="form-group">
-                        <label>Başlık</label>
+                        <label>Gönderen</label>
                         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Email Adres</label>
+                        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
                     </div>
                     <div class="form-group">
                         <label>Tarih</label>
                         @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
                     </div>
                     <div class="form-group">
-                        <label>Mail</label>
-                        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
-                    </div>
-                    <div class="form-group">
                         <label>Açıklama</label>
                         @Html.TextAreaFor(x => x.Content, 6, 3, new { @class = "form-control" })
                     </div>
+                    <a asp-action="Index" class="btn btn-outlibe-primary mr-2">İletişim Sayfası</a>
                 </form>
             </div>
         </div>

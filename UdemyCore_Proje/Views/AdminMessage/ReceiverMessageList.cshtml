@@ -1,23 +1,26 @@
 ﻿@using EntityLayer.Concrete
-@model List<Message>
+@model List<WriterMessage>
+
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "ReceiverMessageList";
     Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<h1>Index</h1>
+
+
 
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">İletişim Kutusu</h4>
+            <h4 class="card-title">Yazar-Admin Gelen Kutusu</h4>
             <div class="table-responsive">
                 <table class="table">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Gönderen</th>
+                            <th>Konu</th>
                             <th>Tarih</th>
                             <th>Sil</th>
                             <th>Mesajı Gör</th>
@@ -27,11 +30,12 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.MessageID</td>
-                                <td>@item.Name</td>
+                                <td>@item.WriterMessageID</td>
+                                <td>@item.SenderName</td>
+                                <td>@item.Subject</td>
                                 <td>@item.Date.ToShortDateString()</td>
-                                <td><a href="/Contact/DeleteContact/@item.MessageID" class="btn btn-outline-danger">Sil</a></td>
-                                <td><a href="/Contact/ContactDetails/@item.MessageID" class="btn btn-outline-success">Mesajı Gör</a></td>
+                                <td><a href="/Contact/DeleteContact/@item.WriterMessageID" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/Contact/ContactDetails/@item.WriterMessageID" class="btn btn-outline-success">Mesajı Gör</a></td>
                             </tr>
                         }
                     </tbody>
