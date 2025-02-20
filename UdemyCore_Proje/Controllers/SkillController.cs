@@ -21,7 +21,6 @@ namespace UdemyCore_Proje.Controllers
         [HttpGet]
         public IActionResult AddSkill()
         {
-
             return View();
         }
         [HttpPost]
