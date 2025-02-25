@@ -26,5 +26,18 @@ namespace UdemyCore_Proje.Controllers
             var values = JsonConvert.SerializeObject(p);
             return Json(values);
         }
+        public IActionResult GetById(int ExperienceID)
+        {
+            var v = experienceManager.TGetByID(ExperienceID);
+            var values = JsonConvert.SerializeObject(v);
+            return Json(values);
+        }
+        public IActionResult DeleteExperience(int id)
+        {
+            var v = experienceManager.TGetByID(id);
+            experienceManager.TDelete(v);
+            return NoContent();
+        }
+
     }
 }
