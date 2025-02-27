@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyCore_Proje", "UdemyCore_Proje\UdemyCore_Proje.csproj", "{4476DCB2-F0BC-40A8-BA91-4FEAF5BD8F51}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{3DBF6C6D-74BE-48AD-AD7A-26B75E9C65CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{2FCF0A16-A1B4-48B6-BD1F-3293ECB4A2DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core_Proje_Api", "Core_Proje_Api\Core_Proje_Api.csproj", "{188CEAA7-E659-4162-B2F3-55120FF03D87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2FCF0A16-A1B4-48B6-BD1F-3293ECB4A2DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FCF0A16-A1B4-48B6-BD1F-3293ECB4A2DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FCF0A16-A1B4-48B6-BD1F-3293ECB4A2DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188CEAA7-E659-4162-B2F3-55120FF03D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188CEAA7-E659-4162-B2F3-55120FF03D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188CEAA7-E659-4162-B2F3-55120FF03D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188CEAA7-E659-4162-B2F3-55120FF03D87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
