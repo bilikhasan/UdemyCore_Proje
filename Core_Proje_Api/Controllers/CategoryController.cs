@@ -46,7 +46,7 @@ namespace Core_Proje_Api.Controllers
             {
                 return NotFound();
             } 
-            else
+            else 
             {
                 c.Remove(value);
                 c.SaveChanges();
