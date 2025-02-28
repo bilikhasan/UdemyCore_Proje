@@ -1,12 +1,14 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace UdemyCore_Proje.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         public IActionResult Index()
