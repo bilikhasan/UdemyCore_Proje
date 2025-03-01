@@ -106,7 +106,7 @@ This project is a dynamic portfolio developed with ASP.NET Core 8.0, featuring a
 
 
 
-
+LinkedIn:  https://www.linkedin.com/feed/update/urn:li:activity:7301663099328118785/
 
 
 
